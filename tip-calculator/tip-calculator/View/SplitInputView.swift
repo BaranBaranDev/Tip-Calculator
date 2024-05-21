@@ -16,7 +16,7 @@ final class SplitInputView: UIView {
     // MARK: - İnitialization
     override init(frame: CGRect) {
         super.init(frame: frame)
-       
+        backgroundColor = .red
         
     }
     
@@ -25,7 +25,7 @@ final class SplitInputView: UIView {
     }
     
     override var intrinsicContentSize: CGSize {
-        return CGSize(width: 200, height: 200)
+        return CGSize(width: 200, height: 50)
     }
 }
 

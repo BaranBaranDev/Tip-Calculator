@@ -16,7 +16,8 @@ final class BillInputView: UIView {
     // MARK: - İnitialization
     override init(frame: CGRect) {
         super.init(frame: frame)
-       
+        backgroundColor = .orange
+
         
     }
     
@@ -25,7 +26,7 @@ final class BillInputView: UIView {
     }
     
     override var intrinsicContentSize: CGSize {
-        return CGSize(width: 200, height: 200)
+        return CGSize(width: 200, height: 50)
     }
 }
 

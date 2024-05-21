@@ -16,7 +16,8 @@ final class LogoView: UIView {
     // MARK: - İnitialization
     override init(frame: CGRect) {
         super.init(frame: frame)
-       
+        backgroundColor = .green
+
         
     }
     
@@ -25,7 +26,7 @@ final class LogoView: UIView {
     }
     
     override var intrinsicContentSize: CGSize {
-        return CGSize(width: 200, height: 200)
+        return CGSize(width: 200, height: 50)
     }
 }
 
