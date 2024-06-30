@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE1496042C318B01003CD444 /* LabelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1496032C318B01003CD444 /* LabelFactory.swift */; };
 		BE1F511C2BFCE7BE000286B6 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1F511B2BFCE7BE000286B6 /* ThemeColor.swift */; };
 		BE1F511E2BFCE7C6000286B6 /* ThemeFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1F511D2BFCE7C6000286B6 /* ThemeFont.swift */; };
 		BE1F51232BFCE971000286B6 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1F51222BFCE971000286B6 /* UIColor+Ext.swift */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE1496032C318B01003CD444 /* LabelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelFactory.swift; sourceTree = "<group>"; };
 		BE1F511B2BFCE7BE000286B6 /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 		BE1F511D2BFCE7C6000286B6 /* ThemeFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeFont.swift; sourceTree = "<group>"; };
 		BE1F51222BFCE971000286B6 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
@@ -102,6 +104,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE1496022C318AEF003CD444 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				BE1496032C318B01003CD444 /* LabelFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		BE1F51182BFCE5AA000286B6 /* Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +181,7 @@
 		BEC7A8A32BF8C32C006A6A1C /* tip-calculator */ = {
 			isa = PBXGroup;
 			children = (
+				BE1496022C318AEF003CD444 /* Factory */,
 				BE1F51192BFCE79B000286B6 /* Config */,
 				BE1F51212BFCE966000286B6 /* Extensions */,
 				BE1F51242BFCED66000286B6 /* Builder */,
@@ -374,6 +385,7 @@
 				BEC7A8A72BF8C32C006A6A1C /* SceneDelegate.swift in Sources */,
 				BEC7A8F32BF8CE34006A6A1C /* SplitInputView.swift in Sources */,
 				BEC7A8F12BF8CE22006A6A1C /* TipInputView.swift in Sources */,
+				BE1496042C318B01003CD444 /* LabelFactory.swift in Sources */,
 				BE1F51262BFCED76000286B6 /* CalculatorBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
