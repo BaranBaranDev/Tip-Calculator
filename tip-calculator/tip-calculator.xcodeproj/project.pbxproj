@@ -30,6 +30,7 @@
 		BEC7A8EF2BF8CE05006A6A1C /* BillInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A8EE2BF8CE05006A6A1C /* BillInputView.swift */; };
 		BEC7A8F12BF8CE22006A6A1C /* TipInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A8F02BF8CE22006A6A1C /* TipInputView.swift */; };
 		BEC7A8F32BF8CE34006A6A1C /* SplitInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC7A8F22BF8CE34006A6A1C /* SplitInputView.swift */; };
+		BEEA30EB2C493EF000446210 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEEA30EA2C493EF000446210 /* HeaderView.swift */; };
 		BEF44E552C341C1C009F299B /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF44E542C341C1C009F299B /* AmountView.swift */; };
 		BEF44E572C341DEB009F299B /* UIView.+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF44E562C341DEB009F299B /* UIView.+Ext.swift */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		BEC7A8EE2BF8CE05006A6A1C /* BillInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillInputView.swift; sourceTree = "<group>"; };
 		BEC7A8F02BF8CE22006A6A1C /* TipInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipInputView.swift; sourceTree = "<group>"; };
 		BEC7A8F22BF8CE34006A6A1C /* SplitInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitInputView.swift; sourceTree = "<group>"; };
+		BEEA30EA2C493EF000446210 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		BEF44E542C341C1C009F299B /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
 		BEF44E562C341DEB009F299B /* UIView.+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView.+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -230,6 +232,7 @@
 				BEC7A8F02BF8CE22006A6A1C /* TipInputView.swift */,
 				BEC7A8F22BF8CE34006A6A1C /* SplitInputView.swift */,
 				BEF44E542C341C1C009F299B /* AmountView.swift */,
+				BEEA30EA2C493EF000446210 /* HeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				BEC7A8F12BF8CE22006A6A1C /* TipInputView.swift in Sources */,
 				BE1496042C318B01003CD444 /* LabelFactory.swift in Sources */,
 				BE1F51262BFCED76000286B6 /* CalculatorBuilder.swift in Sources */,
+				BEEA30EB2C493EF000446210 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

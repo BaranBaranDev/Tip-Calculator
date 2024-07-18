@@ -13,7 +13,9 @@ final class BillInputView: UIView {
     // MARK: - UI Elements
     
     private let headerView: UIView = {
-        return HeaderView()
+        let view = HeaderView()
+        view.configure(topText: "Enter", bottomText: "your bill")
+        return view
     }()
     
     
@@ -120,18 +122,3 @@ final class BillInputView: UIView {
     }
 }
 
-
-
-
-class HeaderView: UIView {
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
-}
