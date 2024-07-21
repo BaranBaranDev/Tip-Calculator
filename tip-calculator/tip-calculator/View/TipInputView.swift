@@ -11,6 +11,7 @@ import CombineCocoa
 
 final class TipInputView: UIView {
     
+    // MARK: - UI Elements
     private let headerView: HeaderView = {
         let view = HeaderView()
         view.configure(
@@ -92,6 +93,8 @@ final class TipInputView: UIView {
     }
     private var cancellables = Set<AnyCancellable>()
     
+    // MARK: - İnitialization
+    
     init() {
         super.init(frame: .zero)
         layout()
@@ -102,6 +105,7 @@ final class TipInputView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Helpers
     func reset() {
         tipSubject.send(.none)
     }
