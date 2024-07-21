@@ -98,7 +98,6 @@ final class TipInputView: UIView {
     init() {
         super.init(frame: .zero)
         layout()
-        observe()
     }
     
     required init?(coder: NSCoder) {
@@ -148,35 +147,8 @@ final class TipInputView: UIView {
             [okAction, cancelAction].forEach(controller.addAction(_:))
             return controller
         }()
-        // parentViewController?.present(alertController, animated: true)
     }
-    
-    private func observe() {
-        tipSubject.sink { [unowned self] tip in
-            resetView()
-            switch tip {
-            case .none:
-                break
-            case .tenPercent:
-                tenPercentTipButton.backgroundColor = ThemeColor.secondary
-            case .fifteenPercent:
-                fifteenPercentTipButton.backgroundColor = ThemeColor.secondary
-            case .twentyPercent:
-                twentyPercentTipButton.backgroundColor = ThemeColor.secondary
-            case .custom(let value):
-                customTipButton.backgroundColor = ThemeColor.secondary
-                let text = NSMutableAttributedString(
-                    string: "$\(value)",
-                    attributes: [
-                        .font: ThemeFont.bold(size: 20)
-                    ])
-                text.addAttributes([
-                    .font: ThemeFont.bold(size: 14)
-                ], range: NSMakeRange(0, 1))
-                customTipButton.setAttributedTitle(text, for: .normal)
-            }
-        }.store(in: &cancellables)
-    }
+  
     
     private func resetView() {
         [tenPercentTipButton,

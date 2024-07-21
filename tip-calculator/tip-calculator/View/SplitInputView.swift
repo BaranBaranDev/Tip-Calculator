@@ -7,8 +7,6 @@
 
 
 import UIKit
-import Combine
-import CombineCocoa
 
 final class SplitInputView: UIView {
     
@@ -23,11 +21,6 @@ final class SplitInputView: UIView {
         let button = buildButton(
             text: "-",
             corners: [.layerMinXMaxYCorner, .layerMinXMinYCorner])
-        //    button.accessibilityIdentifier = ScreenIdentifier.SplitInputView.decrementButton.rawValue
-        button.tapPublisher.flatMap { [unowned self] _ in
-            Just(splitSubject.value == 1 ? 1 : splitSubject.value - 1)
-        }.assign(to: \.value, on: splitSubject)
-            .store(in: &cancellables)
         return button
     }()
     
@@ -35,11 +28,6 @@ final class SplitInputView: UIView {
         let button = buildButton(
             text: "+",
             corners: [.layerMaxXMinYCorner, .layerMaxXMaxYCorner])
-        //    button.accessibilityIdentifier = ScreenIdentifier.SplitInputView.incrementButton.rawValue
-        button.tapPublisher.flatMap { [unowned self] _ in
-            Just(splitSubject.value + 1)
-        }.assign(to: \.value, on: splitSubject)
-            .store(in: &cancellables)
         return button
     }()
     
@@ -48,7 +36,6 @@ final class SplitInputView: UIView {
             text: "1",
             font: ThemeFont.bold(size: 20),
             backgroundColor: .white)
-        //    label.accessibilityIdentifier = ScreenIdentifier.SplitInputView.quantityValueLabel.rawValue
         return label
     }()
     
@@ -63,17 +50,12 @@ final class SplitInputView: UIView {
         return stackView
     }()
     
-    private let splitSubject: CurrentValueSubject<Int, Never> = .init(1)
-    var valuePublisher: AnyPublisher<Int, Never> {
-        return splitSubject.removeDuplicates().eraseToAnyPublisher()
-    }
-    private var cancellables = Set<AnyCancellable>()
+ 
     
     // MARK: - İnitialization
     init() {
         super.init(frame: .zero)
         layout()
-        observe()
     }
     
     required init?(coder: NSCoder) {
@@ -81,9 +63,7 @@ final class SplitInputView: UIView {
     }
     
     // MARK: - Helpers
-    func reset() {
-        splitSubject.send(1)
-    }
+
     
     private func layout() {
         
@@ -107,10 +87,7 @@ final class SplitInputView: UIView {
         }
     }
     
-    private func observe() {
-        
-    }
-    
+
     private func buildButton(text: String, corners: CACornerMask) -> UIButton {
         let button = UIButton()
         button.setTitle(text, for: .normal)
